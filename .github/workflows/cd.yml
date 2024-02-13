@@ -28,6 +28,7 @@ jobs:
         with:
           project_id: 'notely-414200'
           workload_identity_provider: projects/561482810878/locations/global/workloadIdentityPools/github/providers/learn-cicd-starter
+          service_account: cloud-run-deployer@notely-414200.iam.gserviceaccount.com
 
       - name: Set up Cloud SDK
         uses: 'google-github-actions/setup-gcloud@v2'
