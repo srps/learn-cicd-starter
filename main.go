@@ -53,6 +53,12 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
+		defer func(db *sql.DB) {
+			err := db.Close()
+			if err != nil {
+				log.Printf("Error closing database connection: %s", err)
+			}
+		}(db)
 		dbQueries := database.New(db)
 		apiCfg.DB = dbQueries
 		log.Println("Connected to database!")
