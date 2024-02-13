@@ -39,4 +39,4 @@ jobs:
 
       - name: Build and Deploy to Artifact Registry
         run:
-          gcloud builds submit --tag gcloud builds submit --tag us-central1-docker.pkg.dev/notely-414200/notely-ar-repo/serjrps/notely:latest .
+          gcloud builds submit --tag us-central1-docker.pkg.dev/notely-414200/notely-ar-repo/serjrps/notely:latest .
